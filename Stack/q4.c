@@ -29,7 +29,7 @@ int check(char exp[] )
                 if(exp[i]=='(' || exp[i]=='{' || exp[i]=='[')
                         push(exp[i]);
                 if(exp[i]==')' || exp[i]=='}' || exp[i]==']')
-                        if(top==-1)    /*stack empty*/
+                        if(top==-1)  
                         {
                                 printf("Right parentheses are more than left parentheses\n");
                                 return 0;
