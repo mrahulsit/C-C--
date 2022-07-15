@@ -1,22 +1,13 @@
-/*  C Program To Check for Balanced Parentheses using Stack*/
-
-
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-
-#define MAX 30
 int top=-1;
-int stack[MAX];
-
-void push(char);
-char pop();
-int match(char a,char b);
-int check(char []);
-
+int stack[100],size;
 int main()
 {
-        char exp[MAX];
+        char exp[100];
+        printf("Enter Size of Stack :");
+        scanf("%d",&size);
         int valid;
         printf("Enter an algebraic expression : ");
         gets(exp);
@@ -78,7 +69,7 @@ int match(char a,char b)
 
 void push(char item)
 {
-        if(top==(MAX-1))
+        if(top==(size-1))
         {
                 printf("Stack Overflow\n");
                 return;
